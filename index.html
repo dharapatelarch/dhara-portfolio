@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spatial Hues</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="logo"></div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>ARCHITECTURAL PORTFOLIO</h1>
+    <p>DHARA PATEL</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About</h2>
+  <p>
+    I AM AN ARCHITECTURE STUDENT DRIVEN BY A CURIOSITY FOR SPACES SHAPING HUMAN EXPERIENCES.
+    I AM INTO DESIGNING ENVIRONMENTS THAT FEEL INTUITIVE, COMFORTABLE, AND PURPOSEFUL—
+    WHERE FUNCTIONALITY MEETS EMOTION AND EVERYDAY USE BECOMES MEANINGFUL.
+
+    DURING MY ACADEMIC JOURNEY, I HAVE WORKED ON A RANGE OF PROJECTS INCLUDING
+    INSTITUTIONAL, RESIDENTIAL, AND LANDSCAPE PROJECTS, DEVELOPING A VERSATILE
+    UNDERSTANDING OF DESIGN ACROSS SCALES AND CONTEXTS.
+
+    I ASPIRE TO BUILD A PROFESSIONAL PATH IN THE FIELD BY CRAFTING HUMAN-CENTERED
+    SPACES THAT QUIETLY ENHANCE DAILY LIFE THROUGH WELL-CONSIDERED DESIGN.
+  </p>
+
+  <a href="CV.png" target="_blank">
+    <button>Download CV</button>
+  </a>
+</section>
+
+<!-- FEATURED PROJECT SLIDER -->
+
+<section class="featured-project">
+
+  <div class="project-container">
+
+    <button class="nav-btn left" onclick="prevSlide()">&#10094;</button>
+
+    <img id="sliderImage" src="PROJECT 1.png" class="featured-image">
+    
+
+    <button class="nav-btn right" onclick="nextSlide()">&#10095;</button>
+
+  </div>
+
+  <div class="project-details">
+    <h3 id="projectTitle">Organic Urban Park With Interactive Spaces</h3>
+    <p id="projectDesc">
+      Urban park design focusing on organic pathways and interactive zones.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- PROJECT LINKS -->
+
+<div class="project-link">
+  <a href="project1.html">
+    <h2>Project 1</h2>
+    
+  </a>
+   <p>Urban Landscape Design</p>
+
+</div>
+
+<div class="project-link">
+  <a href="project2.html">
+    <h2>Project 2</h2>
+    
+  </a>
+  <p>Compact Leisure Space</p>
+</div>
+
+<div class="project-link">
+  <a href="project3.html">
+    <h2>Project 3</h2>
+    
+  </a>
+  <p>A Weaving Cultural Hub</p>
+</div>
+
+<div class="project-link">
+  <a href="project4.html">
+    <h2>Project 4</h2>
+    
+  </a>
+  <p>A Weaving Cultural Hub</p>
+</div>
+
+
+<section class="projects">
+  <h2>Portfolio</h2>
+  <img src="project1.jpg" alt="Project Preview">
+</section>
+
+<section class="model">
+  <h2>Explore 3D Model</h2>
+  <img src="model.jpg" alt="3D Model">
+  <button>View 3D</button>
+</section>
+
+<section class="video">
+  <h2>Project Film</h2>
+  <iframe width="800" height="450"
+    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</section>
+
+<section class="skills">
+  <h2>Software Skills</h2>
+
+  <div class="skill-icons">
+    <div>AutoCAD</div>
+    <div>SketchUp</div>
+    <div>Photoshop</div>
+  </div>
+
+</section>
+
+
+<script>
+
+const images = [
+  "PROJECT 1.png",
+  "PROJECT 2.png",
+  "PROJECT 3.png",
+  "PROJECT 4.jpg.jpeg" 
+];
+
+const titles = [
+  "Organic Urban Park With Interactive Spaces",
+  "Minimal Built Form With Open Space",
+  "Artisan Weaving Community Living Hub",
+  "Institutional Design "
+
+];
+
+const descriptions = [
+  "Urban park design focusing on organic pathways and interactive zones.",
+  "Compact built form integrated with open breathing spaces.",
+  "Cultural housing concept for artisan weaving communities."
+
+];
+
+let currentIndex = 0;
+
+function updateSlide() {
+  document.getElementById("sliderImage").src = images[currentIndex];
+  document.getElementById("projectTitle").innerText = titles[currentIndex];
+  document.getElementById("projectDesc").innerText = descriptions[currentIndex];
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateSlide();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateSlide();
+}
+
+</script>
+
+</body>
+</html>
